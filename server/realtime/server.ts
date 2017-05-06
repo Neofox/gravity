@@ -4,7 +4,7 @@ import logger from '../logger';
 
 const server = socketio();
 
-export const worldNet = makeNamespace('world');
+export const univNet = makeNamespace('univ');
 export const chatNet = makeNamespace('chat');
 
 export function attachServer(httpServer: Server): void {

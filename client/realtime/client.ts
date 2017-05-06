@@ -1,6 +1,6 @@
 import socketio from 'socket.io-client';
 
-export const worldNet = connectNamespace('world');
+export const univNet = connectNamespace('univ');
 export const chatNet = connectNamespace('chat');
 
 function connectNamespace(name: string): SocketIOClient.Socket {
