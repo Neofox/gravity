@@ -1,4 +1,5 @@
 import { Application } from 'pixi.js';
+import './realtime/client';
 import canvas from './ui/canvas';
 
 //=> Create a Pixi.js application

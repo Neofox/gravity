@@ -1,13 +1,16 @@
 import os from 'os';
 import express from 'express';
+import http from 'http';
 import cors from 'cors';
 import morgan from 'morgan';
 import logger, { morganStreamWriter } from './logger';
 import { forwardToGzippedScripts, serveStaticAssets } from './static-assets';
+import { attachServer } from './realtime/server';
 
 import './bootstrap';
 
 const app = express();
+const server = http.createServer(app);
 const port = process.env.SERVER_PORT;
 
 //=> Enable CORS in dev mode so the front can reach the API
@@ -29,8 +32,11 @@ if (process.env.WEBPACK_ENV == 'production') {
 
 app.use(serveStaticAssets);
 
+//=> Attach socket.io server to the HTTP server
+attachServer(server);
+
 //=> Start the HTTP server
-app.listen(port, () => {
+server.listen(port, () => {
     logger.info(`🌍 Up and running @ http://${os.hostname()}:${port}`);
     logger.info(`Built for: ${process.env.WEBPACK_ENV}`);
 });
