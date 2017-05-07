@@ -25,6 +25,10 @@
     "@types/express-serve-static-core" "*"
     "@types/serve-static" "*"
 
+"@types/matter-js@^0.9.32":
+  version "0.9.32"
+  resolved "https://registry.yarnpkg.com/@types/matter-js/-/matter-js-0.9.32.tgz#81a3e7fd96230f4922982b082cfa265614733a69"
+
 "@types/mime@*":
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/mime/-/mime-0.0.29.tgz#fbcfd330573b912ef59eeee14602bface630754b"
@@ -2521,6 +2525,10 @@ map-stream@~0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/map-stream/-/map-stream-0.1.0.tgz#e56aa94c4c8055a16404a0674b78f215f7c8e194"
 
+matter-js@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/matter-js/-/matter-js-0.12.0.tgz#dcb02d04326c47746c63a3772d1475753d72fe1e"
+
 media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
@@ -3093,6 +3101,10 @@ pixi.js@^4.5.1:
     object-assign "^4.0.1"
     pixi-gl-core "^1.0.3"
     resource-loader "^2.0.6"
+
+poly-decomp@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/poly-decomp/-/poly-decomp-0.2.1.tgz#a5cc4088e9e2974070fa1ee23c7e3f2fc5b516d8"
 
 portfinder@^1.0.9:
   version "1.0.13"
