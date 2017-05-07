@@ -1,7 +1,7 @@
 import { World } from 'matter-js';
 import { Physics, MetaEntity } from './meta_entity';
 
-export class Universe extends MetaEntity<World> {
+export class Space extends MetaEntity<World> {
     public addMetaEntity<T extends Physics>(entity: MetaEntity<T>): void {
         World.add(this.physics, entity.physics as Physics);
     }

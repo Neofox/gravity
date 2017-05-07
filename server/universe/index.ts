@@ -1,2 +1,2 @@
 export * from './spaceship';
-export * from './universe';
+export * from './space';
