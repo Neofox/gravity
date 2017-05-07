@@ -10,9 +10,10 @@ export abstract class MetaEntity<T extends Physics> {
     public readonly physics: IMetaEntityAwarePhysics<T> & T;
 
     constructor() {
-        const matter = this.synthetize();
+        const physics = this.synthetize() as any;
+        physics.meta = this;
 
-        this.physics = { ...matter as any, meta: this };
+        this.physics = physics;
     }
 
     protected abstract synthetize(): T;
