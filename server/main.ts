@@ -14,9 +14,6 @@ const app = express();
 const server = http.createServer(app);
 const port = process.env.SERVER_PORT;
 
-//=> First day
-createUniverse();
-
 //=> Enable CORS in dev mode so the front can reach the API
 if (process.env.WEBPACK_ENV == 'development') {
     app.use(cors());
@@ -43,4 +40,7 @@ attachServer(server);
 server.listen(port, () => {
     logger.info(`🌍 Up and running @ http://${os.hostname()}:${port}`);
     logger.info(`Built for: ${process.env.WEBPACK_ENV}`);
+
+    //=> First day
+    createUniverse();
 });
