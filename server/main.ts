@@ -5,6 +5,7 @@ import cors from 'cors';
 import morgan from 'morgan';
 import logger, { morganStreamWriter } from './logger';
 import { forwardToGzippedScripts, serveStaticAssets } from './static-assets';
+import { createUniverse } from './realtime/god';
 import { attachServer } from './realtime/server';
 
 import './bootstrap';
@@ -12,6 +13,9 @@ import './bootstrap';
 const app = express();
 const server = http.createServer(app);
 const port = process.env.SERVER_PORT;
+
+//=> First day
+createUniverse();
 
 //=> Enable CORS in dev mode so the front can reach the API
 if (process.env.WEBPACK_ENV == 'development') {
