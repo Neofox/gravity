@@ -12,6 +12,7 @@ export class Space extends MetaEntity<World> {
 
     protected synthetize(): World {
         return World.create({
+            label: 'Space',
             gravity: { x: 0, y: 0, scale: 0 }
         });
     }
