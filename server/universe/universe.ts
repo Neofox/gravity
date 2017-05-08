@@ -3,7 +3,7 @@ import { Engine } from 'matter-js';
 import { Space } from './space';
 
 export class Universe {
-    // .engine and .space are the equivaent of space-time =)
+    // .engine and .space are the equivalent of space-time =)
     public readonly engine: Engine;
     public readonly space = new Space();
 
@@ -14,10 +14,10 @@ export class Universe {
     }
 
     public run(): void {
-        this.runnerInterval = setInterval(this.updateUniverse.bind(this), 1000 / 60);
+        this.runnerInterval = setInterval(this.tick.bind(this), 1000 / 60);
     }
 
-    public updateUniverse(): void {
+    public tick(): void {
         Engine.update(this.engine);
     }
 
